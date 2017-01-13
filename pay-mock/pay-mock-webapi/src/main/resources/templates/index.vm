@@ -1,0 +1,230 @@
+<html class="pixel-ratio-3 retina ios ios-9 ios-9-1 ios-gt-8 ios-gt-7 ios-gt-6">
+<head>
+    <script type="text/javascript">
+        var ctx = "/assetbm";
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta charset="utf-8">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="小通分期">
+    <meta name="description" content="小通分期">
+    <title>小通分期</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/allinpay.css">
+    <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+    <script src="/static/js/vue.js"></script>
+    <script src="/static/js/layer_mobile/layer.js"></script>
+
+    <style type="text/css">
+        /*    #stageNumberBox:after {
+                content: ' ';
+                color: #FFFFFF;
+                right: -999px;
+            }*/
+
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div id="all-box">
+    <div id="root">
+        <header>
+            <span>通联申请分期</span>
+        </header>
+        <div class="weui_cells weui_cells_split" v-cloak>
+            <div class="weui_cell check_label">
+                <div class="weui_cell_hd"><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAoCAMAAACsAtiWAAAAgVBMVEUAAAAnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuQnkuRwuE/ZAAAAKnRSTlMAnkLesvKO9Qw2/BsDgGHkqyrYZTovyb1WMiPnl4lR66NsRR0WAerEtRkWy9XDAAABKklEQVQ4y8WUyZaCMBBFMQ4MpjVhFgVRQO33/x/YEDtHUgzdG493RapuKnkLYpm4eby85wdrmhJPTqNdhzGWAIiTGMCjXTlUidDhZ+1n5qOjMvqcNyEAz96qpfQ8AJJzrvef/ON+fwPSuv4tbesUaItHf9ON3UHTD3KAprAkgEQIkQCsp7Bn9Q7AEvBCNRtwe4oLqETXVlljpSdfG65p2lam6jEsGye97bx/cQakqotuykIfTohUffVSsgXlmyhjfErhRbAzCQqiBBiyMxV2synHkNyFOxT+ntAydE1CSZQUQ4q/lZQcFDGKfE8ip9qaVA5RwjU8E5xdU7lgSGAq/PJFCf5/XfUfzSE6RcwqMdpBdjRjMEC9TmW+GScvAZC4E9Hdh7+cwl8drB82wT+VqQI+uAAAAABJRU5ErkJggg=="
+                        alt="" style="width:20px;margin-right:5px;display:block"></div>
+                <div class="weui_cell_bd">
+                    <p>订单信息</p>
+                </div>
+            </div>
+            <div class="weui_cell infos">
+                <div class="weui_cell_hd">
+                    商户名称
+
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p id="merName">合晖保险</p>
+                </div>
+            </div>
+            <div class="weui_cell infos">
+                <div class="weui_cell_hd">
+                    订单编号
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p id="orderId">{{data.order_id}}</p>
+                </div>
+            </div>
+            <div class="weui_cell infos">
+                <div class="weui_cell_hd">
+                    订单时间
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p id="orderTime"> {{data.trade_date +" " +data.trade_time }} </p>
+                </div>
+            </div>
+            <div class="weui_cell infos">
+                <div class="weui_cell_hd">
+                    订单金额
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p id="lfq_amt">{{data.amount}}元</p>
+                    <input type="hidden" id="orderIddes" name="orderIddes" value="WVG8/ojb13IV8LUp7Qo/llQ6hqAeien/
+">
+
+                    <input type="hidden" id="sign" name="sign" value="N2VmMmU1NjhjMzFmNGNhZDI0MTIxMDkyZjNlYWU3MDI=">
+
+                </div>
+            </div>
+            <div class="weui_cell tishi">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p class="tar">该商户仅支持600—<span id="maxApplyNum">20000</span>元商品分期</p>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd"><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAMAAAAz6Z0tAAAAdVBMVEUAAABazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsJazsIJQAldAAAAJnRSTlMADef2S1lS9GHNx35F7d+naSIWPzgy8dnUuLOSix0GrZ42v4hxJy9WwhkAAAD6SURBVCjPjZLZjoMwDAAd7gQoR6En0HaP+f9P3FB42FYJ6khx/DCxbCvyCXsT+NGRNXq2KUQMOot9ZIaTSEoifjpKkYBC/IwEs3ItIh9Fzk5kxzZWCQi3WJRa+Yk5zEosfpqlSra5+8avRMP9Wo828SnJkSdXr1IDurqEYDxKAeZh7/Ybbm6lRNuo7Mlg71ISaGQ6pY3Nz5xdyjAXaaGbB6N0KRXVU9HnvfyCS7lzEVEAg/SELuWH0sZHXWdKck6uXzdCvqZTalONSV7o52bWd60BJR3v9DIdoYq7Ij9ANI/1lYbpP46NiLqwcFi7UC+s67uVYajzVj7iD/z2I0+ULhHVAAAAAElFTkSuQmCC"
+                        alt="" style="width:20px;margin-right:5px;display:block"></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>分期期数</p>
+                </div>
+                <div id="stageNumberBox" class="weui_cell_ft">
+
+                    <input readonly="readonly" id="rate" name="rate" data-rate="0" value="{{data.nper}}"
+                           style="display: inline-block;">
+
+
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_prompt">
+                    <p class="tar">分期手续费:每期仅需<span id="eachFee">0.00%</span>,共<span>0.00</span>元</p>
+                </div>
+            </div>
+            <div class="weui_cells_title bgb">还款测算(元)</div>
+            <div class="weui_cell bgb bt0">
+                <div class="weui_cell_f4 lh20_m12">
+                    <p id="eachPrincipal">{{data.eachMoney}}</p>
+                    <p class="fs14">商品本金</p>
+                </div>
+                <div class="weui_cell_f2 lh20_m12">
+                    <p class="tc"> + </p>
+                </div>
+                <div class="weui_cell_f3 lh20_m12 tc">
+                    <p class="eachFeeNum">0.00</p>
+                    <p class="fs14">手续费</p>
+                </div>
+                <div class="weui_cell_f2 lh20_m12">
+                    <p class="tc"> = </p>
+                </div>
+                <div class="weui_cell_f6 lh20_m12">
+                    <p id="eachMoney">{{data.eachMoney}}</p>
+                    <p class="plem fs14">每期</p>
+                </div>
+            </div>
+            <div class="weui_cell bgb pt" style="display: none;">
+                <div class="weui_cell_bd lh20_m12">
+                    <p class="ts12" style="display: none;">分期总额(元):</p>
+                </div>
+                <div class="weui_cell_fl lh20_m12">
+                    <p id="countMoney" style="display: none;">{{data.amount}}</p>
+                </div>
+            </div>
+        </div>
+        <!--        <div id="root_footer"></div>  -->
+    </div>
+    <div id="footer">
+        <div id="agreement-box">
+            <div id="checkButton">
+                <div class="icheckbox-blue checked">
+                    <input type="checkbox" id="agreement-check" class="light" name="agreement" value="agreement"
+                           checked="">
+                </div>
+                <label>我已阅读并同意</label>
+            </div>
+            <a id="contract" href="javascript:;">《个人消费分期支付合同》</a>
+        </div>
+        <div>
+            <button id="next-step" class="btn btn_primary" v-on:click="next1()">下一步</button>
+        </div>
+        <div>
+            <button class="btn" v-on:click="next2()">无操作</button>
+        </div>
+    </div>
+
+</div>
+</body>
+<script>
+    var model = "";
+    $(function () {
+
+        loadDate(init);
+    });
+
+    var init = function () {
+        new Vue({
+            el: "#all-box",
+            data: {
+                data: model
+            },
+            methods: {
+                next1: nextClick,
+                next2: nilClick
+            }
+        });
+    };
+
+    var loadDate = function (opt) {
+        var id = location.href.split("?id=")[1];
+        console.log("get id " + id);
+        $.get("/allin/get", {id: id}, function (r) {
+            model = r;
+            model.eachMoney = parseInt(r.amount / r.nper);
+
+            opt();
+        });
+    };
+
+    var nextClick = function () {
+        layer.open({
+            content: '您好，检测到您在进行一个通联分期操作，您可以选择本次支付想要的结果'
+            , btn: ['支付失败', '支付成功']
+            , skin: 'footer'
+            , yes: function (index) {
+                layer.close(index);
+                console.log("支付失败");
+                //
+                notity(2);
+            }
+            , no: function () {
+                console.log("支付成功");
+                notity(1);
+            }
+        });
+    };
+
+
+    var nilClick = function () {
+        location.href = model.return_url;
+    };
+
+    var notity = function (result) {
+        var id = location.href.split("?id=")[1];
+        $.get("/allin/set/result", {id: id, r: result}, function (r) {
+            console.log(r);
+            location.href = model.return_url;
+        })
+    }
+
+</script>
+</html>
